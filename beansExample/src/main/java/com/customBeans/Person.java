@@ -1,17 +1,25 @@
 package com.customBeans;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created by Emanuele on 27/12/2016.
  */
+@Service
 public class Person {
 
     private String name;
-    private String lastame;
+    private String lastName;
     private int id;
 
-    public Person(String name, String lastame, int id) {
-        this.name = name;
-        this.lastame = lastame;
-        this.id = id;
+    public Person() {}
+
+    @Override
+    public String toString() {
+        return "Person [" + this + "]{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", id=" + id +
+                '}';
     }
 }
