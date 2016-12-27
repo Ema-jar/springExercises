@@ -18,7 +18,7 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer [" + this + "]{" +
+        return "Computer {" +
                 "seriesNumber='" + seriesNumber + '\'' +
                 ", processor='" + processor + '\'' +
                 ", price='" + price + '\'' +
