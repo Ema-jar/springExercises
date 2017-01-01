@@ -1,8 +1,9 @@
-package com.DBExample.entity;
+package com.DBExample.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
@@ -18,6 +19,7 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    @OneToMany(mappedBy = "author")
     private List<Post> posts;
 
     private Author() {}
