@@ -1,9 +1,6 @@
 package com.emajar.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -15,8 +12,12 @@ public class Post {
     @Id
     @GeneratedValue
     private Long id;
+
     private String title;
+
+    @Column(columnDefinition = "TEXT")
     private String body;
+
     private Date postedOn;
 
     /**
@@ -68,11 +69,6 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Post{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", body='" + body + '\'' +
-                ", postedOn=" + postedOn +
-                '}';
+        return "Post[title='" + title + ", body='" + body + ']';
     }
 }
