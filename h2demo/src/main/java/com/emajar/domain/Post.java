@@ -65,4 +65,14 @@ public class Post {
     public void setAuthor(Author author) {
         this.author = author;
     }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", body='" + body + '\'' +
+                ", postedOn=" + postedOn +
+                '}';
+    }
 }
